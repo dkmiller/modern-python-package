@@ -9,3 +9,4 @@ Helps answer questions like:
 - How do I publish auto-generated docs?
 - How do I handle unit tests, test coverage, etc.?
 - How should I publish to PyPI?
+- How do I configure a development environment: virtual environments, Conda environments, Codespaces?

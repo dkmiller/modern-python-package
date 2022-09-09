@@ -1,0 +1,26 @@
+# https://godatadriven.com/blog/minimal-pyproject-toml-example/
+
+[project]
+name = "modern-python-package"
+readme = "README.md"
+version = "0.0.0"
+authors = [
+    { name = "Dan Miller", email = "daniel.keegan.miller@gmail.com" }
+]
+dependencies = [
+    "pandas==1.4.3"
+]
+[project.optional-dependencies]
+dev = [
+    "black==22.6.0",
+    "flake8==5.0.4",
+    "Flake8-pyproject==1.1.0.post0"
+]
+
+# https://stackoverflow.com/a/73066937
+[project.scripts]
+modern-python-cli = "modern_python_package.cli:main"
+
+# https://github.com/PyCQA/flake8/issues/234
+[tool.flake8]
+max-line-length = 100
