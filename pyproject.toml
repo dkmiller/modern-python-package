@@ -1,4 +1,5 @@
 # https://godatadriven.com/blog/minimal-pyproject-toml-example/
+# https://peps.python.org/pep-0621/
 
 [project]
 name = "modern-python-package"
@@ -24,3 +25,6 @@ modern-python-cli = "modern_python_package.cli:main"
 # https://github.com/PyCQA/flake8/issues/234
 [tool.flake8]
 max-line-length = 100
+
+[tool.pylint]
+good-names=["rv"]
