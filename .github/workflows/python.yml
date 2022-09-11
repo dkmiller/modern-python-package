@@ -54,3 +54,9 @@ jobs:
       uses: codecov/codecov-action@v3
       with:
         fail_ci_if_error: true
+
+    - uses: github/codeql-action/init@v2
+      with:
+        languages: python
+
+    - uses: github/codeql-action/analyze@v2
