@@ -4,6 +4,7 @@
 [![Python versions](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![license: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](LICENSE)
+[![codecov](https://codecov.io/gh/dkmiller/modern-python-package/branch/main/graph/badge.svg?token=D6XPFDQZYR)](https://codecov.io/gh/dkmiller/modern-python-package)
 
 Template for a fully-featured Python repo with build, docs, etc.
 
