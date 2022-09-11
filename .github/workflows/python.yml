@@ -48,6 +48,7 @@ jobs:
       id: singleton
       with:
         cond: ${{ matrix.os == 'ubuntu-latest' && matrix.python-version == '3.8' }}
+        if_true: true
 
     - if: ${{ steps.singleton.outputs.value }}
       uses: EnricoMi/publish-unit-test-result-action@v2
