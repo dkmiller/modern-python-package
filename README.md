@@ -1,5 +1,10 @@
 # Modern Python Package
 
+[![python](https://github.com/dkmiller/modern-python-package/actions/workflows/python.yml/badge.svg)](https://github.com/dkmiller/modern-python-package/actions/workflows/python.yml)
+[![Python versions](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![license: MIT](https://img.shields.io/badge/License-MIT-purple.svg)](LICENSE)
+
 Template for a fully-featured Python repo with build, docs, etc.
 
 Helps answer questions like:
