@@ -4,8 +4,6 @@ on:
   push:
     branches:
     - main
-    # TODO: remove this.
-    - update
   pull_request:
     branches:
     - main
@@ -45,3 +43,9 @@ jobs:
 
     - run: |
         pyright
+
+    - if: ${{ matrix.os == 'ubuntu-latest' && matrix.python-version == '3.8' }}
+      uses: EnricoMi/publish-unit-test-result-action@v2
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        junit_files: test-*.xml
