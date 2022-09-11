@@ -43,6 +43,11 @@ exclude = [
     "test/**"
 ]
 
+[tool.portray.mkdocs]
+markdown_extensions = [
+    "pymdownx.emoji"
+]
+
 # Configure mkdocs:
 # https://timothycrosley.github.io/portray/docs/quick_start/4.-configuration/
 [tool.portray.mkdocs.theme]
