@@ -48,6 +48,10 @@ jobs:
       uses: EnricoMi/publish-unit-test-result-action@v2
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        junit_files: test-*.xml
+        junit_files: coverage.xml
 
     - uses: codecov/codecov-action@v3
+      with:
+        # Without this, you get a misleading error message:
+        # https://github.com/codecov/codecov-action/issues/598
+        files: coverage.xml
