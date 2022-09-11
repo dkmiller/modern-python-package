@@ -39,22 +39,36 @@ jobs:
         flake8 .
 
     - run: |
+        pylint modern_python_package
+
+    - run: |
         pytest
 
     - run: |
         pyright
 
-    - if: ${{ matrix.os == 'ubuntu-latest' && matrix.python-version == '3.8' }}
+    - uses: haya14busa/action-cond@v1
+      id: singleton
+      with:
+        cond: ${{ matrix.os == 'ubuntu-latest' && matrix.python-version == '3.8' }}
+        if_true: true
+
+    - if: ${{ steps.singleton.outputs.value }}
       uses: EnricoMi/publish-unit-test-result-action@v2
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         junit_files: coverage.xml
 
-    - if: ${{ matrix.os == 'ubuntu-latest' && matrix.python-version == '3.8' }}
+    - if: ${{ steps.singleton.outputs.value }}
       uses: codecov/codecov-action@v3
       with:
         fail_ci_if_error: true
 
+    - run: |
+        portray on_github_pages
+      if: ${{ github.ref == 'refs/heads/main' && steps.singleton.outputs.value }}
+
+    # CodeQL is pretty slow, so we put those steps last.
     - uses: github/codeql-action/init@v2
       with:
         languages: python
