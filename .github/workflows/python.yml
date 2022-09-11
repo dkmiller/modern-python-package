@@ -39,6 +39,9 @@ jobs:
         flake8 .
 
     - run: |
+        pylint modern_python_package
+
+    - run: |
         pytest
 
     - run: |
@@ -61,14 +64,13 @@ jobs:
       with:
         fail_ci_if_error: true
 
+    - run: |
+        portray on_github_pages
+      if: ${{ github.ref == 'refs/heads/main' && steps.singleton.outputs.value }}
+
+    # CodeQL is pretty slow, so we put those steps last.
     - uses: github/codeql-action/init@v2
       with:
         languages: python
 
     - uses: github/codeql-action/analyze@v2
-
-    - run: |
-        portray on_github_pages
-      # TODO: add additional condition:
-      # github.ref == 'refs/heads/main'
-      if: ${{ steps.singleton.outputs.value }}
