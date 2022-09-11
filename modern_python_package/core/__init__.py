@@ -1,12 +1,17 @@
 """
-TODO
+Core functionality used throughout the package.
 """
+
+
+import logging
+
+log = logging.getLogger(__name__)
 
 
 def inner_method(string: str, integer: int) -> str:
     """
-    TODO
+    This method duplicates a string the specified number of times.
     """
     rv = string * integer
-    print(rv)
+    log.info("Generated string {rv}" % rv)
     return rv
