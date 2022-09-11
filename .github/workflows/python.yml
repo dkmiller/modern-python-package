@@ -44,13 +44,18 @@ jobs:
     - run: |
         pyright
 
-    - if: ${{ matrix.os == 'ubuntu-latest' && matrix.python-version == '3.8' }}
+    - uses: haya14busa/action-cond@v1
+      id: singleton
+      with:
+        cond: ${{ matrix.os == 'ubuntu-latest' && matrix.python-version == '3.8' }}
+
+    - if: ${{ steps.singleton.outputs.value }}
       uses: EnricoMi/publish-unit-test-result-action@v2
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         junit_files: coverage.xml
 
-    - if: ${{ matrix.os == 'ubuntu-latest' && matrix.python-version == '3.8' }}
+    - if: ${{ steps.singleton.outputs.value }}
       uses: codecov/codecov-action@v3
       with:
         fail_ci_if_error: true
@@ -60,3 +65,9 @@ jobs:
         languages: python
 
     - uses: github/codeql-action/analyze@v2
+
+    - run: |
+        portray on_github_pages
+      # TODO: add additional condition:
+      # github.ref == 'refs/heads/main'
+      if: ${{ steps.singleton.outputs.value }}
