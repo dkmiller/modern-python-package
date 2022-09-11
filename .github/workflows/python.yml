@@ -49,3 +49,5 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         junit_files: test-*.xml
+
+    - uses: codecov/codecov-action@v3
