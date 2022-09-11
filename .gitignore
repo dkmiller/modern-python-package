@@ -1,1 +1,8 @@
+# Directories
 *.egg-info/
+__pycache__/
+.pytest_cache/
+
+# Files
+.coverage
+coverage.xml

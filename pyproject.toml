@@ -1,4 +1,5 @@
 # https://godatadriven.com/blog/minimal-pyproject-toml-example/
+# https://peps.python.org/pep-0621/
 
 [project]
 name = "modern-python-package"
@@ -14,7 +15,10 @@ dependencies = [
 dev = [
     "black==22.6.0",
     "flake8==5.0.4",
-    "Flake8-pyproject==1.1.0.post0"
+    "Flake8-pyproject==1.1.0.post0",
+    "pyright==1.1.270",
+    "pytest==7.1.3",
+    "pytest-cov==3.0.0",
 ]
 
 # https://stackoverflow.com/a/73066937
@@ -24,3 +28,16 @@ modern-python-cli = "modern_python_package.cli:main"
 # https://github.com/PyCQA/flake8/issues/234
 [tool.flake8]
 max-line-length = 100
+
+[tool.pylint]
+good-names=["rv"]
+
+# https://docs.pytest.org/en/7.1.x/reference/customize.html#pyproject-toml
+[tool.pytest.ini_options]
+addopts = "--cov --junitxml=coverage.xml --cov-fail-under=80"
+
+# https://github.com/microsoft/pyright/blob/main/docs/configuration.md#sample-pyprojecttoml-file
+[tool.pyright]
+exclude = [
+    "test/**"
+]
