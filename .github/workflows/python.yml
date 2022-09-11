@@ -65,7 +65,7 @@ jobs:
         fail_ci_if_error: true
 
     - run: |
-        portray on_github_pages
+        portray on_github_pages --force
       if: ${{ github.ref == 'refs/heads/main' && steps.singleton.outputs.value }}
 
     # CodeQL is pretty slow, so we put those steps last.
