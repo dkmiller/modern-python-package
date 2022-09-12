@@ -14,6 +14,7 @@ dependencies = [
 [project.optional-dependencies]
 dev = [
     "black==22.6.0",
+    "build==0.8.0",
     "flake8==5.0.4",
     "Flake8-pyproject==1.1.0.post0",
     "portray==1.7.0",
@@ -54,3 +55,7 @@ markdown_extensions = [
 [tool.portray.mkdocs.theme]
 name = "material"
 palette = {primary = "blue"}
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
