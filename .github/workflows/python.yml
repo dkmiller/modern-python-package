@@ -42,6 +42,9 @@ jobs:
         pylint modern_python_package
 
     - run: |
+        python -m build --wheel
+
+    - run: |
         pytest
 
     - run: |
@@ -74,3 +77,14 @@ jobs:
         languages: python
 
     - uses: github/codeql-action/analyze@v2
+
+    # Follow:
+    # https://packaging.python.org/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/
+    # to publish the generated wheel to pypi.org. You may optionally remove the
+    # 'if' condition, and add a 'with'
+    # repository_url: https://test.pypi.org/legacy, and use the password
+    # test_pypi_password to verify that publication to test.pypi.org works.
+    - uses: pypa/gh-action-pypi-publish@release/v1
+      if: ${{ startsWith(github.ref, 'refs/tags') && steps.singleton.outputs.value }}
+      with:
+        password: ${{ secrets.pypi_password }}
