@@ -60,7 +60,6 @@ jobs:
       uses: EnricoMi/publish-unit-test-result-action@v2
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        junit_files: coverage.xml
 
     - if: ${{ steps.singleton.outputs.value }}
       uses: codecov/codecov-action@v3
