@@ -42,13 +42,13 @@ jobs:
         pylint modern_python_package
 
     - run: |
-        python -m build --wheel
-
-    - run: |
         pytest
 
     - run: |
         pyright
+
+    - run: |
+        python -m build --wheel
 
     - uses: haya14busa/action-cond@v1
       id: singleton
