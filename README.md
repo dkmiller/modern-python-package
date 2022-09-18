@@ -23,4 +23,4 @@ This repository is not especially original. You may find similar ideas in
 
 - [topics/python-package-example](https://github.com/topics/python-package-example)
 - [Hochfrequenz/python_template_repository](https://github.com/Hochfrequenz/python_template_repository)
-
+- [simonw/python-lib-template-repository](https://github.com/simonw/python-lib-template-repository)
