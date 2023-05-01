@@ -9,7 +9,7 @@ authors = [
     { name = "Dan Miller", email = "daniel.keegan.miller@gmail.com" }
 ]
 dependencies = [
-    "pandas==1.5.1"
+    "pandas==2.0.1"
 ]
 [project.optional-dependencies]
 dev = [
