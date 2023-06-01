@@ -18,7 +18,7 @@ dev = [
     "flake8==6.0.0",
     "Flake8-pyproject==1.1.0.post0",
     "portray==1.7.0",
-    "pylint==2.17.3",
+    "pylint==2.17.4",
     "pyright==1.1.277",
     "pytest==7.2.0",
     "pytest-cov==4.0.0",
