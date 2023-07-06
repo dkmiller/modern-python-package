@@ -9,19 +9,19 @@ authors = [
     { name = "Dan Miller", email = "daniel.keegan.miller@gmail.com" }
 ]
 dependencies = [
-    "pandas==2.0.1"
+    "pandas==2.0.3"
 ]
 [project.optional-dependencies]
 dev = [
-    "black==22.12.0",
-    "build==0.9.0",
+    "black==23.3.0",
+    "build==0.10.0",
     "flake8==6.0.0",
-    "Flake8-pyproject==1.1.0.post0",
-    "portray==1.7.0",
-    "pylint==2.17.3",
-    "pyright==1.1.277",
-    "pytest==7.2.0",
-    "pytest-cov==4.0.0",
+    "Flake8-pyproject==1.2.3",
+    "portray==1.8.0",
+    "pylint==2.17.4",
+    "pyright==1.1.316",
+    "pytest==7.4.0",
+    "pytest-cov==4.1.0",
 ]
 
 # https://stackoverflow.com/a/73066937
