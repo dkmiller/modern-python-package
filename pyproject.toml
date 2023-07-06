@@ -4,7 +4,7 @@
 [project]
 name = "modern-python-package"
 readme = "README.md"
-version = "0.0.0"
+version = "0.0.1"
 authors = [
     { name = "Dan Miller", email = "daniel.keegan.miller@gmail.com" }
 ]
@@ -16,7 +16,7 @@ dev = [
     "black==22.12.0",
     "build==0.9.0",
     "flake8==6.0.0",
-    "Flake8-pyproject==1.1.0.post0",
+    "Flake8-pyproject==1.2.3",
     "portray==1.7.0",
     "pylint==2.17.3",
     "pyright==1.1.277",
