@@ -53,7 +53,7 @@ jobs:
     - uses: haya14busa/action-cond@v1
       id: singleton
       with:
-        cond: ${{ matrix.os == 'ubuntu-latest' && matrix.python-version == '3.8' }}
+        cond: ${{ matrix.os == 'ubuntu-latest' && matrix.python-version == '3.8' && github.actor != 'dependabot[bot]' }}
         if_true: true
 
     - if: ${{ steps.singleton.outputs.value }}
@@ -71,13 +71,6 @@ jobs:
         portray on_github_pages --force
       if: ${{ github.ref == 'refs/heads/main' && steps.singleton.outputs.value }}
 
-    # CodeQL is pretty slow, so we put those steps last.
-    - uses: github/codeql-action/init@v2
-      with:
-        languages: python
-
-    - uses: github/codeql-action/analyze@v2
-
     # Follow:
     # https://packaging.python.org/guides/publishing-package-distribution-releases-using-github-actions-ci-cd-workflows/
     # to publish the generated wheel to pypi.org. You may optionally remove the
@@ -87,4 +80,4 @@ jobs:
     - uses: pypa/gh-action-pypi-publish@release/v1
       if: ${{ startsWith(github.ref, 'refs/tags') && steps.singleton.outputs.value }}
       with:
-        password: ${{ secrets.pypi_password }}
+        password: ${{ secrets.PYPI_SECRET }}
