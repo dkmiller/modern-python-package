@@ -13,13 +13,13 @@ dependencies = [
 ]
 [project.optional-dependencies]
 dev = [
-    "black==23.3.0",
+    "black==23.7.0",
     "build==0.10.0",
-    "flake8==6.0.0",
+    "flake8==6.1.0",
     "Flake8-pyproject==1.2.3",
     "portray==1.8.0",
-    "pylint==2.17.4",
-    "pyright==1.1.316",
+    "pylint==2.17.5",
+    "pyright==1.1.318",
     "pytest==7.4.0",
     "pytest-cov==4.1.0",
 ]
