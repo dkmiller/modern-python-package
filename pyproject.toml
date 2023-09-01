@@ -9,7 +9,7 @@ authors = [
     { name = "Dan Miller", email = "daniel.keegan.miller@gmail.com" }
 ]
 dependencies = [
-    "pandas==2.0.3"
+    "pandas==2.1.0"
 ]
 [project.optional-dependencies]
 dev = [
@@ -19,7 +19,7 @@ dev = [
     "Flake8-pyproject==1.2.3",
     "portray==1.8.0",
     "pylint==2.17.5",
-    "pyright==1.1.318",
+    "pyright==1.1.325",
     "pytest==7.4.0",
     "pytest-cov==4.1.0",
 ]
