@@ -10,18 +10,18 @@ authors = [
 ]
 requires-python = ">=3.9,<3.13"
 dependencies = [
-    "pandas==2.1.1"
+    "pandas==2.1.2"
 ]
 [project.optional-dependencies]
 dev = [
-    "black==23.9.1",
+    "black==23.10.1",
     "build==1.0.3",
     "flake8==6.1.0",
     "Flake8-pyproject==1.2.3",
     "portray==1.8.0",
-    "pylint==3.0.1",
-    "pyright==1.1.329",
-    "pytest==7.4.2",
+    "pylint==3.0.2",
+    "pyright==1.1.333",
+    "pytest==7.4.3",
     "pytest-cov==4.1.0",
 ]
 
