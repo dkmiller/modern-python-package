@@ -2,7 +2,6 @@
 Command-line interface for the package.
 """
 
-
 from modern_python_package.core import inner_method
 
 
