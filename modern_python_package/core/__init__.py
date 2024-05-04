@@ -2,7 +2,6 @@
 Core functionality used throughout the package.
 """
 
-
 import logging
 
 log = logging.getLogger(__name__)

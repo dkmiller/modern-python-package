@@ -33,7 +33,10 @@ jobs:
         pip install .[dev]
 
     - run: |
-        black --check .
+        ruff check .
+
+    - run: |
+        ruff format --check .
 
     - run: |
         flake8 .
