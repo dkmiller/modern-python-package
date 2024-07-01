@@ -15,14 +15,14 @@ dependencies = [
 [project.optional-dependencies]
 dev = [
     "build==1.2.1",
-    "flake8==7.0.0",
+    "flake8==7.1.0",
     "Flake8-pyproject==1.2.3",
     "portray==1.8.0",
-    "pylint==3.2.2",
-    "pyright==1.1.365",
-    "pytest==8.2.1",
+    "pylint==3.2.5",
+    "pyright==1.1.369",
+    "pytest==8.2.2",
     "pytest-cov==5.0.0",
-    "ruff==0.4.7",
+    "ruff==0.5.0",
 ]
 
 # https://stackoverflow.com/a/73066937
