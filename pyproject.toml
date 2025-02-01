@@ -18,11 +18,11 @@ dev = [
     "flake8==7.1.1",
     "Flake8-pyproject==1.2.3",
     "portray==1.8.0",
-    "pylint==3.3.3",
-    "pyright==1.1.391",
+    "pylint==3.3.4",
+    "pyright==1.1.393",
     "pytest==8.3.4",
     "pytest-cov==6.0.0",
-    "ruff==0.8.4",
+    "ruff==0.9.4",
 ]
 
 # https://stackoverflow.com/a/73066937
