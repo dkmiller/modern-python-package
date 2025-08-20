@@ -4,6 +4,8 @@
 [project]
 name = "modern-python-package"
 readme = "README.md"
+# Increment version numbers following the semantic versioning
+# standard: https://semver.org/
 version = "0.0.3"
 authors = [
     { name = "Dan Miller", email = "daniel.keegan.miller@gmail.com" }
