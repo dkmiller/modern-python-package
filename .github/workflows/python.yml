@@ -17,7 +17,7 @@ jobs:
         # Sadly, support for macOS M1 chips yet:
         # https://github.com/actions/runner-images/issues/2187
         os: [macos-latest, ubuntu-latest, windows-latest]
-        python-version: [3.9, '3.10', 3.11, 3.12]
+        python-version: [3.9, '3.10', 3.11, 3.12, 3.13, 3.14]
 
     runs-on: ${{ matrix.os }}
 
