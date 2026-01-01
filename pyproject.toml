@@ -24,7 +24,7 @@ dev = [
     "pyright==1.1.407",
     "pytest==8.4.2",
     "pytest-cov==7.0.0",
-    "ruff==0.14.7",
+    "ruff==0.14.10",
 ]
 
 # https://stackoverflow.com/a/73066937
