@@ -6,7 +6,7 @@ name = "modern-python-package"
 readme = "README.md"
 # Increment version numbers following the semantic versioning
 # standard: https://semver.org/
-version = "0.0.4"
+version = "0.0.5"
 authors = [
     { name = "Dan Miller", email = "daniel.keegan.miller@gmail.com" }
 ]
@@ -60,5 +60,5 @@ name = "material"
 palette = {primary = "blue"}
 
 [build-system]
-requires = ["setuptools"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
