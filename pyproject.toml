@@ -22,7 +22,7 @@ dev = [
     "portray==1.8.0",
     "pylint==3.3.9",
     "pyright==1.1.410",
-    "pytest==8.4.2",
+    "pytest==9.0.3",
     "pytest-cov==7.1.0",
     "ruff==0.15.15",
 ]
